@@ -9,8 +9,8 @@
 
 #Common
 target/
-!/src/main/
-!/src/test/
+!**/src/main/**
+!**/src/test/**
 /log/
 application-local.yaml
 
