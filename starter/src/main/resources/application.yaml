@@ -1,0 +1,24 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  liquibase:
+    change-log: classpath*:database/master.xml
+    enabled: true
+  jpa:
+    show-sql: true
+    open-in-view: false
+server:
+  port: 8080
+
+hibernate:
+  dialect: org.hibernate.dialect.PostgreSQLDialect
+  ejb:
+    naming_strategy: org.hibernate.cfg.ImplicitNamingStrategy
+  show_sql: true
+  format_sql: true
+  hbm2ddl:
+    auto: validate
+
+service:
+  microhotel:
+    url: http://localhost:8081
