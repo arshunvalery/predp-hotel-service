@@ -1,4 +1,4 @@
-package com.hotel.adapter.dto;
+package com.hotel.adapter.controller.facility;
 
 import lombok.Data;
 

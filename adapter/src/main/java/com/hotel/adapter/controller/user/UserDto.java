@@ -1,4 +1,4 @@
-package com.hotel.adapter.dto;
+package com.hotel.adapter.controller.user;
 
 import com.hotel.domain.enums.UserStatus;
 import lombok.Data;

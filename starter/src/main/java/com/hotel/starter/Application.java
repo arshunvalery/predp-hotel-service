@@ -9,8 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication(scanBasePackages = "com.hotel")
 @EntityScan(basePackages = "com.hotel.domain")
 @EnableFeignClients(basePackages = "com.hotel.adapter")
-//@ComponentScan("com.hotel")
-@EnableJpaRepositories(basePackages = "com.hotel")
+@EnableJpaRepositories(basePackages = "com.hotel.adapter")
 public class Application {
     public static void main(String[] args) {
 

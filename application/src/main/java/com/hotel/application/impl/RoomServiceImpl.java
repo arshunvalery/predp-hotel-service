@@ -36,16 +36,14 @@ public class RoomServiceImpl implements RoomService {
         return roomRepository.save(entity);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public Collection<Room> findAll() {
         log.info("Я - МЕТОД ВЫВОДА ВСЕГО В СЕРВИСЕ КОМНАТЫ!!!");
-        return roomRepository.findAll()
-                .stream()
-                .collect(Collectors.toList());
+        return roomRepository.findAll();
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public Room findById(UUID id) {
         log.info("Я - МЕТОД ВЫВОДА ОДНОГО В СЕРВИСЕ КОМНАТЫ!!!");

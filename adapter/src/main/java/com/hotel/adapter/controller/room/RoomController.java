@@ -1,6 +1,5 @@
 package com.hotel.adapter.controller.room;
 
-import com.hotel.adapter.dto.RoomDto;
 import com.hotel.domain.enums.RoomStatus;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

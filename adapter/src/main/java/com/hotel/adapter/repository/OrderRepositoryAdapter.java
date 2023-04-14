@@ -15,27 +15,9 @@ import java.util.UUID;
 public class OrderRepositoryAdapter implements OrderRepository {
 
     private final OrderJpaRepository orderJpaRepository;
-    private final GuestJpaRepository guestJpaRepository;
 
     @Override
     public Order save(Order order) {
-
-        int facilitiesPrice = 0;
-
-        for(int i = 0; i < order.getFacilities().size(); i++) {
-            facilitiesPrice += order.getFacilities().get(i).getPrice();
-        }
-
-        Guest guest = new Guest();
-        guest.setId(order.getGuest().getId());
-        guest.setName(order.getGuest().getName());
-        guest.setSurname(order.getGuest().getSurname());
-        guest.setTel(order.getGuest().getTel());
-        guest.setAge(order.getGuest().getAge());
-        guest.setGender(order.getGuest().getGender());
-        guest.setCash(order.getGuest().getCash() - (order.getRoom().getPrice() + facilitiesPrice));
-        guestJpaRepository.save(guest);
-
         return orderJpaRepository.save(order);
     }
 
@@ -57,23 +39,6 @@ public class OrderRepositoryAdapter implements OrderRepository {
 
     @Override
     public Order update(Order order) {
-
-        int facilitiesPrice = 0;
-
-        for(int i = 0; i < order.getFacilities().size(); i++) {
-            facilitiesPrice += order.getFacilities().get(i).getPrice();
-        }
-
-        Guest guest = new Guest();
-        guest.setId(order.getGuest().getId());
-        guest.setName(order.getGuest().getName());
-        guest.setSurname(order.getGuest().getSurname());
-        guest.setTel(order.getGuest().getTel());
-        guest.setAge(order.getGuest().getAge());
-        guest.setGender(order.getGuest().getGender());
-        guest.setCash(order.getGuest().getCash() - order.getRoom().getPrice() + facilitiesPrice);
-        guestJpaRepository.save(guest);
-
         return orderJpaRepository.save(order);
     }
 }

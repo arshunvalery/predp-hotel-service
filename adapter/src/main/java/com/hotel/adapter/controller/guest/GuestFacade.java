@@ -1,6 +1,5 @@
 package com.hotel.adapter.controller.guest;
 
-import com.hotel.adapter.dto.GuestDto;
 import com.hotel.application.api.service.GuestService;
 import com.hotel.domain.Guest;
 import lombok.RequiredArgsConstructor;

@@ -37,16 +37,14 @@ public class GuestServiceImpl implements GuestService {
         return entity;
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public Collection<Guest> findAll() {
         log.info("Я - МЕТОД ВЫВОДА ВСЕГО В СЕРВИСЕ ГОСТЯ!!!");
-        return guestRepository.findAll()
-                .stream()
-                .collect(Collectors.toList());
+        return guestRepository.findAll();
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public Guest findById(UUID id) {
         log.info("Я - МЕТОД ВЫВОДА ОДНОГО В СЕРВИСЕ ГОСТЯ!!!");

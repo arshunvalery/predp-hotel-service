@@ -1,5 +1,8 @@
-package com.hotel.adapter.dto;
+package com.hotel.adapter.controller.order;
 
+import com.hotel.adapter.controller.facility.FacilityDto;
+import com.hotel.adapter.controller.guest.GuestDto;
+import com.hotel.adapter.controller.room.RoomDto;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;

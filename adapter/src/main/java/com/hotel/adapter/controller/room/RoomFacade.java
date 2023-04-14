@@ -1,6 +1,5 @@
 package com.hotel.adapter.controller.room;
 
-import com.hotel.adapter.dto.RoomDto;
 import com.hotel.application.api.service.RoomService;
 import com.hotel.domain.Room;
 import com.hotel.domain.enums.RoomStatus;

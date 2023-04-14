@@ -1,6 +1,5 @@
 package com.hotel.adapter.controller.order;
 
-import com.hotel.adapter.dto.OrderDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

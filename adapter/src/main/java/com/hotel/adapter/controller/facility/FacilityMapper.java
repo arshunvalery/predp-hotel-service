@@ -1,7 +1,6 @@
 package com.hotel.adapter.controller.facility;
 
 import com.hotel.adapter.controller.BaseMapper;
-import com.hotel.adapter.dto.FacilityDto;
 import com.hotel.domain.Facility;
 import org.mapstruct.Mapper;
 

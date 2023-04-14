@@ -31,16 +31,14 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(entity);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public Collection<User> findAll() {
         log.info("Я - МЕТОД ВЫВОДА ВСЕГО В СЕРВИСЕ ГОСТЯ!!!");
-        return userRepository.findAll()
-                .stream()
-                .collect(Collectors.toList());
+        return userRepository.findAll();
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public User findById(UUID id) {
         log.info("Я - МЕТОД ВЫВОДА ОДНОГО В СЕРВИСЕ ГОСТЯ!!!");

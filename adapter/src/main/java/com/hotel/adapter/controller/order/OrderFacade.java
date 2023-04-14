@@ -1,6 +1,5 @@
 package com.hotel.adapter.controller.order;
 
-import com.hotel.adapter.dto.OrderDto;
 import com.hotel.application.api.service.OrderService;
 import com.hotel.domain.Order;
 import lombok.RequiredArgsConstructor;

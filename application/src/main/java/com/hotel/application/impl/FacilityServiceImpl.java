@@ -27,16 +27,14 @@ public class FacilityServiceImpl implements FacilityService {
         return facilityRepository.save(entity);
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public Collection<Facility> findAll() {
         log.info("Я - МЕТОД ВЫВОДА ВСЕГО В СЕРВИСЕ УСЛУГИ!!!");
-        return facilityRepository.findAll()
-                .stream()
-                .collect(Collectors.toList());
+        return facilityRepository.findAll();
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public Facility findById(UUID id) {
         log.info("Я - МЕТОД ВЫВОДА ОДНОГО В СЕРВИСЕ УСЛУГИ!!!");

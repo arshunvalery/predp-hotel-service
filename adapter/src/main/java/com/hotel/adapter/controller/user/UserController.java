@@ -1,7 +1,6 @@
 package com.hotel.adapter.controller.user;
 
 
-import com.hotel.adapter.dto.UserDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

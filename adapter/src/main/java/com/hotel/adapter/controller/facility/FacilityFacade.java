@@ -1,6 +1,5 @@
 package com.hotel.adapter.controller.facility;
 
-import com.hotel.adapter.dto.FacilityDto;
 import com.hotel.application.api.service.FacilityService;
 import com.hotel.domain.Facility;
 import lombok.RequiredArgsConstructor;

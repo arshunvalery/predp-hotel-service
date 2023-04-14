@@ -1,6 +1,5 @@
 package com.hotel.adapter.controller.user;
 
-import com.hotel.adapter.dto.UserDto;
 import com.hotel.application.api.service.UserService;
 import com.hotel.domain.User;
 import lombok.RequiredArgsConstructor;
